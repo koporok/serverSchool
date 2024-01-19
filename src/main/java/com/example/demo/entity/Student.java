@@ -1,34 +1,31 @@
 package com.example.demo.entity;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import java.util.Date;
-import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Entity
+@Entity // Сущность, для хранения в базе данных
 @Getter
 @Setter
-@Builder
-@AllArgsConstructor
+//@Builder
+//@AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "students")
 public class Student {
 
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long id;
+  @Id //индификатор
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  private Integer id;
 
   private String fullName;
 
-  @Column(name = "version_date", nullable = false, columnDefinition = "TIMESTAMP")
+ /* @Column(name = "version_date", nullable = false, columnDefinition = "TIMESTAMP")
   private Date dateOfBirth;
 
   private String contactInformation;
@@ -37,5 +34,5 @@ public class Student {
 
   private String sportType;
 
-  private String login;
+  private String login;*/
 }
