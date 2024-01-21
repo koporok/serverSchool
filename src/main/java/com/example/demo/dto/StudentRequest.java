@@ -6,11 +6,22 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.stereotype.Component;
 
+import java.util.Date;
+
 @Builder
 @Getter
-public class StudentRequest {
+public class StudentRequest{
     private String fullName;
     private String name;
+    private Date dateOfBirth;
+
+    private String contactInformation;
+
+    private Long groupId; // Unique group identifier
+
+    private String sportType;
+
+    private String login;
 }
 /*
 @Builder

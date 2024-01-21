@@ -1,14 +1,12 @@
 package com.example.demo.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.Date;
 
 @Entity // Сущность, для хранения в базе данных
 @Getter
@@ -25,7 +23,7 @@ public class Student {
 
   private String fullName;
 
- /* @Column(name = "version_date", nullable = false, columnDefinition = "TIMESTAMP")
+  //@Column(name = "version_date", nullable = false, columnDefinition = "TIMESTAMP")
   private Date dateOfBirth;
 
   private String contactInformation;
@@ -34,5 +32,5 @@ public class Student {
 
   private String sportType;
 
-  private String login;*/
+  private String login;
 }
