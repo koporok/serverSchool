@@ -17,7 +17,7 @@ public class StudentRequest{
 
     private String contactInformation;
 
-    private Long groupId; // Unique group identifier
+    private Long groupId;
 
     private String sportType;
 

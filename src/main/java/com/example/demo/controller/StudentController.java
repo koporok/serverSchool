@@ -11,8 +11,7 @@ import com.example.demo.server.StudentServer;
 import java.util.List;
 
 @RestController
-@RequestMapping("/students") // добавим мэппинг для всех методов в контроллере
-
+@RequestMapping
 public class StudentController {
 
     @Autowired
@@ -21,13 +20,7 @@ public class StudentController {
     @Autowired
     private StudentServer studentServer;
 
-    @RequestMapping("/greet")
-    @GetMapping
-    public String greeting() {
-        return "Хранение данных детской школы единоборств";
-    }
-
-    @GetMapping("/all")
+    /*@GetMapping("/all")
     public ResponseEntity<List<Student>> getAllStudents() {
 
         //Iterator<Student> students = (Iterator<Student>) studentRepository.findAll(); // получаем список всех студентов
@@ -36,8 +29,8 @@ public class StudentController {
         List<Student> all = studentRepository.findAll();
         return ResponseEntity.ok(all);
     }
-
-    @PostMapping("/save")
+*/
+    @PostMapping("/students")
     public ResponseEntity<?> add(@RequestBody StudentRequest student){
 
         ResponseEntity<List<Student>> responseData = studentServer.ReturnData(student);
