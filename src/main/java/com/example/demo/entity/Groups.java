@@ -10,8 +10,6 @@ import java.util.Date;
 @Entity // Сущность, для хранения в базе данных
 @Getter
 @Setter
-//@Builder
-//@AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "groups")
 public class Groups {

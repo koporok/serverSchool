@@ -1,12 +1,8 @@
 package com.example.demo.controller;
 
-import com.example.demo.dto.CoachesRequest;
 import com.example.demo.dto.ScheduleRequest;
-import com.example.demo.entity.Coaches;
 import com.example.demo.entity.Schedule;
-import com.example.demo.repository.CoachesRepository;
 import com.example.demo.repository.ScheduleRepository;
-import com.example.demo.server.CoachesServer;
 import com.example.demo.server.ScheduleServer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

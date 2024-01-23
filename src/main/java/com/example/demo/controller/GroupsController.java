@@ -1,13 +1,9 @@
 package com.example.demo.controller;
 
 import com.example.demo.dto.GroupsRequest;
-import com.example.demo.dto.ScheduleRequest;
 import com.example.demo.entity.Groups;
-import com.example.demo.entity.Schedule;
 import com.example.demo.repository.GroupsRepository;
-import com.example.demo.repository.ScheduleRepository;
 import com.example.demo.server.GroupsServer;
-import com.example.demo.server.ScheduleServer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

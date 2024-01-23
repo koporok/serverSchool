@@ -1,11 +1,8 @@
 package com.example.demo.server;
 
 import com.example.demo.dto.GroupsRequest;
-import com.example.demo.dto.ScheduleRequest;
 import com.example.demo.entity.Groups;
-import com.example.demo.entity.Schedule;
 import com.example.demo.repository.GroupsRepository;
-import com.example.demo.repository.ScheduleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;

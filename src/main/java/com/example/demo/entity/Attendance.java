@@ -9,8 +9,6 @@ import lombok.Setter;
 @Entity // Сущность, для хранения в базе данных
 @Getter
 @Setter
-//@Builder
-//@AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "attendance")
 public class Attendance {

@@ -1,17 +1,13 @@
 package com.example.demo.entity;
 import jakarta.persistence.*;
-import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.Date;
 
 @Entity // Сущность, для хранения в базе данных
 @Getter
 @Setter
-//@Builder
-//@AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "coaches")
 public class Coaches{
