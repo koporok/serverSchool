@@ -20,8 +20,7 @@ public class Student {
 
   private String fullName;
 
-  //@Column(name = "version_date", nullable = false, columnDefinition = "TIMESTAMP")
-  private Date dateOfBirth;
+  private String dateOfBirth;
 
   private String contactInformation;
 
@@ -30,4 +29,5 @@ public class Student {
   private String sportType;
 
   private String login;
+
 }

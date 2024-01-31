@@ -9,7 +9,7 @@ import java.util.Date;
 @Getter
 public class StudentRequest{
     private String fullName;
-    private Date dateOfBirth;
+    private String dateOfBirth;
 
     private String contactInformation;
 

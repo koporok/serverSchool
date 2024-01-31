@@ -5,14 +5,14 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 
-@Entity // Сущность, для хранения в базе данных
+@Entity
 @Getter
 @Setter
 @NoArgsConstructor
 @Table(name = "coaches")
 public class Coaches{
 
-    @Id //индификатор
+    @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
@@ -21,4 +21,5 @@ public class Coaches{
     private String contact_information;
 
     private String login;
+    private String information;
 }

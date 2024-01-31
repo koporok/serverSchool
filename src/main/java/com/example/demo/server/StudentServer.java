@@ -10,7 +10,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 
+
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class StudentServer {
@@ -18,6 +21,16 @@ public class StudentServer {
     @Autowired
     private StudentRepository studentRepository;
 
+
+    public void StudentService(StudentRepository studentRepository) {
+        this.studentRepository = studentRepository;
+    }
+
+    public List<Student> getAllStudents() {
+        List<Student> students = new ArrayList<>();
+        studentRepository.findAll().forEach(students::add);
+        return students;
+    }
 
     public ResponseEntity<List<Student>> ReturnData(@RequestBody StudentRequest student){
         List<Student> all = studentRepository.findAll();
@@ -53,5 +66,33 @@ public class StudentServer {
             return new ResponseEntity<>("Произошла ошибка при удалении студента: " + e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+
+    public Student updateStudent(Long id, Student updatedStudent) {
+        Student existingStudent = studentRepository.findById(id).orElse(null);
+
+        if(existingStudent != null) {
+            existingStudent.setFullName(updatedStudent.getFullName());
+            existingStudent.setDateOfBirth(updatedStudent.getDateOfBirth());
+            existingStudent.setContactInformation(updatedStudent.getContactInformation());
+            existingStudent.setGroupId(updatedStudent.getGroupId());
+            existingStudent.setSportType(updatedStudent.getSportType());
+            existingStudent.setLogin(updatedStudent.getLogin());
+
+            return studentRepository.save(existingStudent);
+        } else {
+            // Обработка случая, когда студент с указанным ID не найден
+            return null;
+        }
+    }
+
+    public Student getStudentByLogin(String login) {
+        List<Student> students = studentRepository.findAllByLogin(login);
+        if (!students.isEmpty()) {
+            return students.get(0);
+        } else {
+            return null; // или выбросить исключение, в зависимости от вашей логики
+        }
+    }
+
 }
 

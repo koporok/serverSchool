@@ -14,15 +14,15 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping
+@RequestMapping("/groups")
 public class GroupsController {
     @Autowired
     private GroupsRepository groupsRepository;
 
     @Autowired
     private GroupsServer groupsServer;
-    @PostMapping("/groups")
-    public ResponseEntity<?> add(@RequestBody GroupsRequest groups) {
+    @PostMapping("/")
+    public ResponseEntity<?> add(@RequestBody Groups groups) {
 
         ResponseEntity<List<Groups>> responseData = groupsServer.ReturnData(groups);
 

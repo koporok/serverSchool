@@ -16,16 +16,15 @@ public class Groups {
 
     @Id //индификатор
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private Integer group_id;
 
     private String group_name;
 
-    //@Column(name = "version_date", nullable = false, columnDefinition = "TIMESTAMP")
-    private String sport_type  ;
+    private String sport_type;
 
     private String age_group;
 
-    private Integer max_students; // Unique group identifier
+    private int max_students;
 
     private Integer coach_id;
 
