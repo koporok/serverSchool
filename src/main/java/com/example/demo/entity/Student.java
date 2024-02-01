@@ -16,7 +16,7 @@ public class Student {
 
   @Id //индификатор
   @GeneratedValue(strategy = GenerationType.AUTO)
-  private Integer id;
+  private Integer students_id;
 
   private String fullName;
 

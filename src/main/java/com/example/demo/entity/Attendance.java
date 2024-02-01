@@ -15,7 +15,7 @@ public class Attendance {
 
     @Id //индификатор
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private Integer attendance_id;
 
     private Integer student_id;
 

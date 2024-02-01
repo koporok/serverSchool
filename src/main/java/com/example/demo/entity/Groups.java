@@ -26,6 +26,8 @@ public class Groups {
 
     private int max_students;
 
-    private Integer coach_id;
+    //@ManyToOne
+    //@JoinColumn(name = "coach_id", referencedColumnName = "coach_id")
+    //private Coaches coach;
 
 }

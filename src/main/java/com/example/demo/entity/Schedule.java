@@ -17,7 +17,7 @@ public class Schedule {
 
     @Id //индификатор
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private Integer schedule_id;
 
     private Integer group_id;
 

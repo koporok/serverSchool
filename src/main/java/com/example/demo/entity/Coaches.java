@@ -14,7 +14,7 @@ public class Coaches{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private Integer coach_id;
 
     private String full_name;
 

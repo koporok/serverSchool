@@ -12,7 +12,7 @@ public class GroupsRequest {
 
     private String age_group;
 
-    private Integer max_students; // Unique group identifier
+    private Integer max_students;
 
     private Integer coach_id;
 }
