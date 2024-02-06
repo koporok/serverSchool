@@ -1,9 +1,7 @@
 package com.example.demo.controller;
 
 import com.example.demo.dto.CoachesRequest;
-import com.example.demo.dto.StudentRequest;
 import com.example.demo.entity.Coaches;
-import com.example.demo.entity.Student;
 import com.example.demo.repository.CoachesRepository;
 import com.example.demo.server.CoachesServer;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,6 +38,11 @@ public class CoachesController {
     public ResponseEntity<Coaches> addCoaches(@RequestBody Coaches сoachesDTO) {
         ResponseEntity<Coaches> responseData = coachesServer.addCoachesToDatabase(сoachesDTO);
         return responseData;
+    }
+
+    @GetMapping("/user/{login}")
+    public Coaches getCoachesByLogin(@PathVariable String login) {
+        return coachesServer.getStudentByLogin(login);
     }
 }
 

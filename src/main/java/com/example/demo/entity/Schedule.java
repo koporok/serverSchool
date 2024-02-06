@@ -12,19 +12,19 @@ import java.util.Date;
 @Getter
 @Setter
 @NoArgsConstructor
-@Table(name = "schedule")
+@Table(name = "Schedule")
 public class Schedule {
 
     @Id //индификатор
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer schedule_id;
+    private Integer lessonid;
 
-    private Integer group_id;
+    private int groupid;
 
-    private Date lesson_date;
+    private Date lessondate;
 
     private String time;
 
-    private Integer coach_id;
+    private int coachesid;
 
 }

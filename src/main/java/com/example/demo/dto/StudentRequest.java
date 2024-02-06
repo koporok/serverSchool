@@ -8,21 +8,17 @@ import java.util.Date;
 @Builder
 @Getter
 public class StudentRequest{
-    private String fullName;
-    private String dateOfBirth;
+    private String fullname;
 
-    private String contactInformation;
+    private String dateofbirth;
 
-    //private Long groupId;
+    private String contactinfo;
 
-    private String sportType;
+    private Long groupid;
 
-    //private String login;
+    private String sporttype;
+
+    private String login;
+
+
 }
-/*
-@Builder
-@Getter
-public class StudentResponse {
-    private String fullName;
-    private String name;
-}*/

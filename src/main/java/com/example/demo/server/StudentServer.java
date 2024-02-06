@@ -41,10 +41,10 @@ public class StudentServer {
     public ResponseEntity<String> addStudentToDatabase(@RequestBody StudentRequest studentDTO) {
         try {
             Student student = new Student();
-            student.setFullName(studentDTO.getFullName());
-            student.setDateOfBirth(studentDTO.getDateOfBirth());
-            student.setContactInformation(studentDTO.getContactInformation());
-            student.setSportType(studentDTO.getSportType());
+            student.setFullname(studentDTO.getFullname());
+            student.setDateofbirth(studentDTO.getDateofbirth());
+            student.setContactinfo(studentDTO.getContactinfo());
+            student.setSporttype(studentDTO.getSporttype());
 
             studentRepository.save(student);
 
@@ -71,11 +71,11 @@ public class StudentServer {
         Student existingStudent = studentRepository.findById(id).orElse(null);
 
         if(existingStudent != null) {
-            existingStudent.setFullName(updatedStudent.getFullName());
-            existingStudent.setDateOfBirth(updatedStudent.getDateOfBirth());
-            existingStudent.setContactInformation(updatedStudent.getContactInformation());
-            existingStudent.setGroupId(updatedStudent.getGroupId());
-            existingStudent.setSportType(updatedStudent.getSportType());
+            existingStudent.setFullname(updatedStudent.getFullname());
+            existingStudent.setDateofbirth(updatedStudent.getDateofbirth());
+            existingStudent.setContactinfo(updatedStudent.getContactinfo());
+            existingStudent.setGroupid(updatedStudent.getGroupid());
+            existingStudent.setSporttype(updatedStudent.getSporttype());
             existingStudent.setLogin(updatedStudent.getLogin());
 
             return studentRepository.save(existingStudent);
@@ -90,7 +90,7 @@ public class StudentServer {
         if (!students.isEmpty()) {
             return students.get(0);
         } else {
-            return null; // или выбросить исключение, в зависимости от вашей логики
+            return null;
         }
     }
 

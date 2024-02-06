@@ -6,11 +6,9 @@ import com.example.demo.repository.ScheduleRepository;
 import com.example.demo.server.ScheduleServer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -27,5 +25,11 @@ public class ScheduleController {
         ResponseEntity<List<Schedule>> responseData = scheduleServer.ReturnData(schedule);
 
         return responseData;
+    }
+
+    @GetMapping("/date/{lessondate}")
+    public Schedule getCoachesByLogin(@PathVariable Date lessondate) {
+
+        return scheduleServer.getStudentByDate(lessondate);
     }
 }

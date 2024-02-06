@@ -9,16 +9,16 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-@Table(name = "coaches")
+@Table(name = "Coaches")
 public class Coaches{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer coach_id;
+    private Integer coachesid;
 
-    private String full_name;
+    private String fullname;
 
-    private String contact_information;
+    private String contactinfo;
 
     private String login;
     private String information;

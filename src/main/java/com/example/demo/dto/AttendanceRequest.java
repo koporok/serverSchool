@@ -7,11 +7,11 @@ import lombok.Getter;
 @Builder
 @Getter
 public class AttendanceRequest {
-    private Integer student_id;
 
-    private Integer lesson_id;
 
-    private String login;
+    private Integer StudentID;
 
-    private Boolean attendanceFlag;
+    private Integer LessonID;
+
+    private Boolean PresenceFlag;
 }

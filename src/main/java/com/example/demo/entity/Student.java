@@ -11,23 +11,24 @@ import java.util.Date;
 @Getter
 @Setter
 @NoArgsConstructor
-@Table(name = "students")
+@Table(name = "Students")
 public class Student {
 
   @Id //индификатор
   @GeneratedValue(strategy = GenerationType.AUTO)
-  private Integer students_id;
+  private Integer studentid;
 
-  private String fullName;
+  private String fullname;
 
-  private String dateOfBirth;
+  private String dateofbirth;
 
-  private String contactInformation;
+  private String contactinfo;
 
-  private Long groupId; // Unique group identifier
+  private int groupid;
 
-  private String sportType;
+  private String sporttype;
 
   private String login;
+
 
 }

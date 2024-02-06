@@ -6,13 +6,12 @@ import lombok.Getter;
 @Builder
 @Getter
 public class GroupsRequest {
-    private String group_name;
+    private String GroupName;
 
-    private String sport_type  ;
+    private String SportType;
 
-    private String age_group;
+    private String Aage;
 
     private Integer max_students;
-
-    private Integer coach_id;
+    private Integer TrainerID;
 }

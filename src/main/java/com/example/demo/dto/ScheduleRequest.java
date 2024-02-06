@@ -9,11 +9,11 @@ import java.util.Date;
 @Getter
 
 public class ScheduleRequest {
-    private Integer group_id;
+    private Integer GroupID;
 
-    private Date lesson_date;
+    private Date LessonDate;
 
-    private String time;
+    private String Time;
 
-    private Integer coach_id;
+    private Integer TrainerID;
 }

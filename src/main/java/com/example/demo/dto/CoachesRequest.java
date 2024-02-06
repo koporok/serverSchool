@@ -7,9 +7,13 @@ import lombok.Getter;
 @Builder
 @Getter
 public class CoachesRequest {
-    private String full_name;
 
-    private String contact_information;
 
-    private String login;
+    private String FullName;
+
+    private String ContactInfo;
+
+    private String Login;
+    private String Information;
 }
+

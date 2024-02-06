@@ -1,6 +1,5 @@
 package com.example.demo.server;
 
-import com.example.demo.dto.CoachesRequest;
 import com.example.demo.entity.Coaches;
 import com.example.demo.repository.CoachesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,8 +48,8 @@ public class CoachesServer {
     public ResponseEntity<Coaches> addCoachesToDatabase(@RequestBody Coaches coachesRequest) {
         try {
             Coaches coaches = new Coaches();
-            coaches.setFull_name(coachesRequest.getFull_name());
-            coaches.setContact_information(coachesRequest.getContact_information());
+            coaches.setFullname(coachesRequest.getFullname());
+            coaches.setCoachesid(coachesRequest.getCoachesid());
             coaches.setLogin(coachesRequest.getLogin());
             coaches.setInformation(coachesRequest.getInformation());
 
@@ -59,6 +58,15 @@ public class CoachesServer {
             return ResponseEntity.status(HttpStatus.OK).body(coaches);
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
+    }
+
+    public Coaches getStudentByLogin(String login) {
+        List<Coaches> students = coachesRepository.findAllByLogin(login);
+        if (!students.isEmpty()) {
+            return students.get(0);
+        } else {
+            return null;
         }
     }
 }

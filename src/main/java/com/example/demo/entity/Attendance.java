@@ -10,18 +10,18 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-@Table(name = "attendance")
+@Table(name = "Attendance")
 public class Attendance {
 
     @Id //индификатор
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer attendance_id;
+    private Integer attendanceid;
 
-    private Integer student_id;
+    private int studentid;
 
-    private Integer lesson_id;
+    private int lessonid;
 
-    private String login;
+    private Boolean presenceflag;
 
-    private Boolean attendanceFlag;
+
 }

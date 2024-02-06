@@ -4,8 +4,10 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.Type;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity // Сущность, для хранения в базе данных
 @Getter
@@ -16,18 +18,21 @@ public class Groups {
 
     @Id //индификатор
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer group_id;
+    private Integer groupid;
 
-    private String group_name;
+    private String groupname;
 
-    private String sport_type;
+    private String sporttype;
 
-    private String age_group;
+    @Column
+    private String aage;
 
-    private int max_students;
 
-    //@ManyToOne
-    //@JoinColumn(name = "coach_id", referencedColumnName = "coach_id")
-    //private Coaches coach;
+    private int maxstudents;
+
+    @Column
+    private int coachesid;
+
+
 
 }

@@ -1,6 +1,5 @@
 package com.example.demo.controller;
 
-import com.example.demo.dto.GroupsRequest;
 import com.example.demo.entity.Groups;
 import com.example.demo.repository.GroupsRepository;
 import com.example.demo.server.GroupsServer;
