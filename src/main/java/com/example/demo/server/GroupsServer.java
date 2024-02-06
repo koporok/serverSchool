@@ -19,4 +19,9 @@ public class GroupsServer {
         return ResponseEntity.ok(all);
 
     }
+
+    public ResponseEntity<List<Groups>> returnData() {
+        List<Groups> allGroups = groupsRepository.findAll();
+        return ResponseEntity.ok(allGroups);
+    }
 }

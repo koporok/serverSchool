@@ -21,6 +21,7 @@ public class Schedule {
 
     private int groupid;
 
+    @Column(name = "lessondate")
     private Date lessondate;
 
     private String time;

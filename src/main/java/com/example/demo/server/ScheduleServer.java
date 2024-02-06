@@ -23,7 +23,7 @@ public class ScheduleServer {
     }
 
     public Schedule getStudentByDate(Date lessondate) {
-        List<Schedule> schedule = scheduleRepository.findAllByDate((Data) lessondate);
+        List<Schedule> schedule = scheduleRepository.findAllByLessondate(lessondate);
         if (!schedule.isEmpty()) {
             return schedule.get(0);
         } else {
