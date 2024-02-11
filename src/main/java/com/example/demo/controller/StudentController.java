@@ -22,11 +22,6 @@ public class StudentController {
         this.studentServer = studentServer;
     }
 
-    @GetMapping("/check") // добавляем явно указанный путь к методу
-    public String checkServerConnection() {
-        return "Server is connected";
-    }
-
     @PostMapping("/add") // добавление студента
     public ResponseEntity<String> addStudent(@RequestBody StudentRequest studentDTO) {
         ResponseEntity<String> responseData = studentServer.addStudentToDatabase(studentDTO);
